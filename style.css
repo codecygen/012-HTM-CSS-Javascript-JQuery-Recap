@@ -1,0 +1,9 @@
+body {
+    background-color: #e2bebe;
+}
+
+.color-change {
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}

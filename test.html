@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, Javascript, JQuery</title>
+
+    <!-- This is an external CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- This is an internal CSS -->
+    <style>
+        p {
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This is an inline CSS -->
+    <h1 style="color: red">This is Title</h1>
+
+    <!-- This is controlled by internal CSS -->
+    <p>This is styled by</p>
+
+    <button>Javascript Click!</button>
+
+    <button id="jquery">JQuery Click!</button>
+
+    <p id="color-text">Text Color Change</p>
+    <button id="color-button">Change Color</button>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <!-- External Javascript -->
+    <script src="index.js"></script>
+
+    <!-- Internal Javascript -->
+    <script>
+        const myButton = document.getElementsByTagName('button')[0];
+
+        console.log(myButton);
+
+        myButton.addEventListener('click', () => {alert('Javascript Click!');});
+        document.addEventListener('keydown', (event) => {alert(event.key);});
+
+        document.querySelector("#color-button").addEventListener('click', () => {
+            document.querySelector("#color-text").classList.toggle("color-change");
+        });
+
+        // JQuery Code
+        $("#jquery").click(() => {alert('JQuery Click!');});
+    </script>
+</body>
+
+</html>
